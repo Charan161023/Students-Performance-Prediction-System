@@ -84,7 +84,6 @@ The dataset is loaded from CSV file.
 ```python
 df = pd.read_csv("data/Student_Performance.csv")
 ```
-
 ### Step 2: Data Analysis
 
 Data is analyzed using:
