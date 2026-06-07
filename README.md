@@ -218,6 +218,8 @@ Student_Performance_Regression/
 ├── requirements.txt
 
 └── README.md
+   Screenshots
+
 
 ---
 
@@ -258,3 +260,13 @@ Machine Learning Project
 Vihara Tech
 
 2026
+## Screenshots
+
+### Home Page
+![Home Page](Screenshots/home_page.png)
+
+### Prediction Result
+![Prediction Result](Screenshots/prediction_result.png)
+
+### GitHub Repository
+![GitHub Repository](Screenshots/github_repo.png)
