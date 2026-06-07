@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Performance Prediction System</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background: linear-gradient(135deg,#0f4c81,#1f6fd1);
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+
+        .container{
+            width:550px;
+            background:white;
+            padding:35px;
+            border-radius:20px;
+            box-shadow:0px 10px 30px rgba(0,0,0,0.3);
+        }
+
+        h1{
+            text-align:center;
+            color:#0f4c81;
+            margin-bottom:10px;
+            font-size:38px;
+        }
+
+        .subtitle{
+            text-align:center;
+            color:gray;
+            margin-bottom:25px;
+            font-size:18px;
+        }
+
+        label{
+            display:block;
+            margin-top:15px;
+            margin-bottom:8px;
+            font-weight:bold;
+            color:#333;
+            font-size:17px;
+        }
+
+        input{
+            width:100%;
+            padding:12px;
+            border:1px solid #ccc;
+            border-radius:8px;
+            font-size:16px;
+        }
+
+        input:focus{
+            outline:none;
+            border:2px solid #0f4c81;
+        }
+
+        button{
+            width:100%;
+            padding:14px;
+            margin-top:25px;
+            background:#0f4c81;
+            color:white;
+            border:none;
+            border-radius:8px;
+            font-size:18px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        button:hover{
+            background:#1f6fd1;
+        }
+
+        .result{
+            margin-top:25px;
+            padding:15px;
+            background:#e8f5e9;
+            border:2px solid green;
+            border-radius:10px;
+            color:green;
+            text-align:center;
+            font-size:22px;
+            font-weight:bold;
+        }
+
+        .footer{
+            text-align:center;
+            margin-top:25px;
+            color:#666;
+            font-size:15px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🎓</h1>
+
+    <h1 style="font-size:32px;">
+        Student Performance Prediction System
+    </h1>
+
+    <p class="subtitle">
+        Machine Learning Regression Project
+    </p>
+
+    <form action="/predict" method="POST">
+
+        <label>📚 Hours Studied</label>
+        <input type="number" step="any" name="hours" required>
+
+        <label>📈 Previous Scores</label>
+        <input type="number" step="any" name="scores" required>
+
+        <label>🏆 Extracurricular Activities (1 = Yes, 0 = No)</label>
+        <input type="number" step="any" name="activities" required>
+
+        <label>😴 Sleep Hours</label>
+        <input type="number" step="any" name="sleep" required>
+
+        <label>📝 Sample Question Papers Practiced</label>
+        <input type="number" step="any" name="papers" required>
+
+        <button type="submit">
+            🚀 Predict Performance
+        </button>
+
+    </form>
+
+    {% if prediction_text %}
+    <div class="result">
+        {{ prediction_text }}
+    </div>
+    {% endif %}
+
+    <div class="footer">
+        Developed by <b>Teja</b> | Machine Learning Regression Project | Vihara Tech
+    </div>
+
+</div>
+
+</body>
+</html>
